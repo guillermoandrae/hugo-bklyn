@@ -1,11 +1,15 @@
 @media only screen and (max-width: $small-device-max-width) {
   h1 {
-    margin: 1em auto 0;
+    margin: 1em auto;
     text-align: center;
   }
 
   p {
     font-size: 1em;
+  }
+
+  blockquote {
+    font-size: .9em;
   }
 
   #container, footer {
@@ -28,7 +32,7 @@
   #banner + #nav {
     font-size: .8em;
     text-align: center;
-    top: 4.5em;
+    top: 4.6em;
     width: 100%;
     ul {
       margin: 0 auto;
@@ -38,6 +42,12 @@
 
   #banner + #nav + #container {
     padding-top: 1em;
+  }
+
+  #copyright {
+    margin: 2em auto 0;
+    padding: 0;
+    width: 80%;
   }
 
 }
