@@ -19,3 +19,15 @@
 #icon = "fa-twitter"
 #link = "https://twitter.com/twitter"
 
+############## PLUGINS ##############
+#[[ plugins.css ]]
+#url = "scss/plugin1.scss"
+
+#[[ plugins.css ]]
+#url = "scss/plugin2.scss"
+
+#[[ plugins.js ]]
+#url = "js/plugin1.js"
+
+#[[ plugins.js ]]
+#url = "js/plugin2.js"

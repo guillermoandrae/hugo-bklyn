@@ -1,0 +1,15 @@
+@import "variables";
+
+// Brooklyn Days
+$background-color: white;
+$text-color: #333;
+$light-text-color: #aaa;
+$highlight-color: cornflowerblue;
+$light-highlight-color: lighten($highlight-color, 20%);
+$muted-text-color: #ddd;
+$muted-division-color: darken($background-color, 10%);
+
+// BLM
+$banner-background-color: black;
+$banner-border-color: black;
+$banner-text-color: white;

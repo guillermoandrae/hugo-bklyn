@@ -32,10 +32,27 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 
-    <!-- App CSS -->
+    <!-- Normalize CSS -->
     <link href="//cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
-    {{ $styles := resources.Get "scss/style.scss" | toCSS | minify }}
-    <link href="{{ $styles.Permalink }}" rel="stylesheet">
+
+    {{ $stylesDay := resources.Get "scss/style-day.scss" | toCSS | minify }}
+    {{ $stylesNight := resources.Get "scss/style-night.scss" | toCSS | minify }}
+    <!-- App CSS -->
+    <script>
+        var getStyle = function () {
+            var currentTime = new Date().getHours();
+            if (currentTime&&currentTime <= 16) {
+                document.write("<link href=\"{{ $stylesDay.Permalink }}\" rel=\"stylesheet\">\n");
+            } else {
+                document.write("<link href=\"{{ $stylesNight.Permalink }}\" rel=\"stylesheet\">\n");
+            }
+        }();
+    </script>
+    <noscript><link href="{{ $stylesDay.Permalink }}" rel="stylesheet"></noscript>
+    {{ range .Site.Params.Plugins.Css }}
+    {{ $css := resources.Get .url | toCSS | minify }}
+    <link href="{{ $css.Permalink }}" rel="stylesheet">
+    {{ end }}
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="//www.googletagmanager.com/gtag/js?id={{ .Site.Params.Google.AnalyticsId }}"></script>

@@ -1,0 +1,15 @@
+@import "variables";
+
+// Brooklyn Nights
+$background-color: #222;
+$text-color: #ddd;
+$light-text-color: #777;
+$highlight-color: yellow;
+$light-highlight-color: lighten($highlight-color, 20%);
+$muted-text-color: #444;
+$muted-division-color: lighten($background-color, 10%);
+
+// BLM
+$banner-background-color: lighten($background-color, 5%);
+$banner-border-color: $banner-background-color;
+$banner-text-color: $text-color;

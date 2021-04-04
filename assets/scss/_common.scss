@@ -29,16 +29,40 @@ body {
       font-size: .9em;
       font-weight: 700;
       display: block;
-      letter-spacing: 2px;
+      letter-spacing: 1px;
       margin: 0;
       padding: 1.15em 1.5em;
       text-transform: uppercase;
     }
     a:hover {
-      background: transparent;
-      color: $muted-text-color;
+      background: $banner-background-color;
+      color: $light-text-color;
     }
   }
+}
+
+h1 {
+  background: $highlight-color;
+  color: $background-color;
+  display: table;
+  font-size: 1em;
+  font-weight: 700;
+  margin-left: -2em;
+  padding: 5px 8px;
+  text-transform: uppercase;
+  width: auto;
+}
+
+.page-home p strong {
+  color: $highlight-color;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: .2em 0 0;
 }
 
 p {
@@ -46,11 +70,28 @@ p {
   line-height: 1.5em;
 }
 
+body.page-404 #container p {
+  font-size: 2em;
+  text-align: center;
+}
+
+h1+p {
+  margin-top: .2em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
 blockquote {
-  border-left: 10px solid #ddd;
-  color: #888;
+  border-left: 10px solid $muted-division-color;
+  color: $light-text-color;
   font-size: .8em;
-  padding-left: 20px;
+  padding-left: 40px;
 }
 
 a, a:visited {
@@ -71,7 +112,9 @@ a:hover {
 }
 
 hr {
-  border-top: 1px solid $muted-division-color;
+  background: $muted-division-color;
+  border: 0;
+  height: 1px;
 }
 
 footer {
