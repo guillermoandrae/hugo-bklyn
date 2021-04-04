@@ -1,0 +1,10 @@
+<div id="banner">
+    {{ .Site.Params.Banner.Message }} <a href="{{ .Site.Params.Banner.Link }}">{{ .Site.Params.Banner.CTA }}</a>
+</div>
+<div id="nav">
+    <ul>
+        {{ range sort .Site.Pages "Permalink" "asc" }}
+        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        {{ end }}
+    </ul>
+</div>

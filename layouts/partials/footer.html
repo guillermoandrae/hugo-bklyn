@@ -1,0 +1,17 @@
+<hr>
+<footer>
+    <ul id="social">
+        {{ range .Site.Params.Social }}
+        <li><a title="{{ .title }}" href="{{ .link | safeURL }}"><i class="fab {{ .icon }}"></i></a></li>
+        {{ end }}
+    </ul>
+    <p id="copyright">Use the code; don't use the content.<br>Built with <a href="https://gohugo.io/">Hugo</a> using the <a href="https://github.com/guillermoandrae/hugo-bklyn">bklyn</a> theme.</p>
+</footer>
+
+{{ range .Site.Params.Plugins.Js }}
+{{ $js := resources.Get .url | resources.Minify }}
+<script src="{{ $js.Permalink }}"></script>
+{{ end }}
+
+</body>
+</html>

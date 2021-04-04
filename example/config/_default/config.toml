@@ -1,0 +1,6 @@
+baseURL = "http://example.com"
+title = "bklyn theme"
+theme = "hugo-bklyn"
+themesDir = "../.."
+ignoreErrors = [ "error-disable-taxonomy" ]
+disableKinds = [ "taxonomy" ]

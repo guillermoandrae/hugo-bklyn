@@ -1,0 +1,29 @@
+h1 {
+  background: $highlight-color;
+  color: $background-color;
+  display: table;
+  font-size: 1em;
+  font-weight: 700;
+  margin-left: -2em;
+  padding: 5px 8px;
+  text-transform: uppercase;
+  width: auto;
+}
+
+h1+p {
+  margin-top: .2em;
+}
+
+strong {
+  color: $highlight-color;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: .2em 0 0;
+}
+
+

@@ -1,0 +1,21 @@
+############## GOOGLE ##############
+[google]
+siteVerificationId = "BLAHBLAHBLAHBLAH"
+analyticsId = "UA-XXXXXXX-X"
+
+############## BANNER ##############
+[banner]
+message = "Black Lives Matter."
+link = "https://blacklivesmatter.com"
+cta = "Make a difference."
+
+############## SOCIAL MEDIA ##############
+[[social]]
+title = "GitHub"
+icon = "fa-github"
+link = "https://github.com/guillermoandrae/hugo-bklyn"
+
+[[social]]
+title = "Twitter"
+icon = "fa-twitter"
+link = "https://twitter.com/guillermoandrae"
