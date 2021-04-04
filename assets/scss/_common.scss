@@ -106,6 +106,24 @@ a:hover {
   color: $light-highlight-color;
 }
 
+input[type="search"] {
+  background: $background-color;
+  border: 5px solid $light-highlight-color;
+  color: $light-text-color;
+}
+
+input::placeholder {
+  color: $light-text-color;
+}
+
+th {
+  color: $muted-text-color;
+}
+
+td {
+  border-bottom: 1px solid $muted-division-color;
+}
+
 #container, footer {
   margin: 0 auto 3em;
   width: 55%;
