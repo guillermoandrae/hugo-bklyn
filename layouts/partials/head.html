@@ -54,7 +54,7 @@
                 const currentTime = new Date().getHours();
                 stylesheetUrl = (currentTime && currentTime <= 17) ? normalStylesheetUrl : darkStylesheetUrl;
             }
-            document.write("<link href=\"" + stylesheetUrl + "\" rel=\"stylesheet\">\n");
+            document.write("<link id=\"theme-mode\" href=\"" + stylesheetUrl + "\" rel=\"stylesheet\">\n");
         })();
     </script>
     <noscript><link href="{{ $stylesNormal.Permalink }}" rel="stylesheet"></noscript>

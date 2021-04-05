@@ -12,7 +12,8 @@
         {{ else }}
             {{ now.Format "2006" }}.
         {{ end }}<br>
-        Built with <a href="https://gohugo.io/">Hugo</a> using the <a href="https://github.com/guillermoandrae/hugo-bklyn">bklyn</a> theme.
+        Built with <a href="https://gohugo.io/">Hugo</a> using the <a href="https://github.com/guillermoandrae/hugo-bklyn">bklyn</a> theme.<br>
+        <button id="dark-mode-toggle">Toggle Dark Mode</button>
     </p>
 </footer>
 
@@ -20,6 +21,8 @@
 {{ $js := resources.Get .url | resources.Minify }}
 <script src="{{ $js.Permalink }}"></script>
 {{ end }}
+{{ $modes := resources.Get "js/modes.js" | resources.Minify }}
+<script src="{{ $modes.Permalink }}"></script>
 
 </body>
 </html>

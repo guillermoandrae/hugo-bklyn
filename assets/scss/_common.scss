@@ -72,6 +72,16 @@ input[type="search"] {
   color: $secondary-text-color;
 }
 
+button {
+  background: $nav-background-color;
+  border: 0;
+  color: $nav-text-color;
+  font-size: .8em;
+  font-weight: 700;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
 input::placeholder {
   color: $secondary-text-color;
 }
