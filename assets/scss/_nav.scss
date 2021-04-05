@@ -1,0 +1,32 @@
+#nav {
+  background-color: $highlight-color;
+  margin: -3px 0 0;
+  padding: 0;
+  position: absolute;
+  top: 1em;
+}
+
+#nav ul {
+  li {
+    border: 0;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    a {
+      background: $highlight-color;
+      border: 0;
+      color: $background-color;
+      font-size: .9em;
+      font-weight: 700;
+      display: block;
+      letter-spacing: 1px;
+      margin: 0;
+      padding: 1.15em 1.5em;
+      text-transform: uppercase;
+    }
+    a:hover {
+      background: $banner-background-color;
+      color: $light-text-color;
+    }
+  }
+}

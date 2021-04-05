@@ -1,0 +1,42 @@
+.page-home p strong {
+  color: $highlight-color;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+body.page-404 #container p {
+  font-size: 2em;
+  text-align: center;
+}
+
+#copyright {
+  color: $light-text-color;
+  font-size: 1.3em;
+  margin: 0;
+  padding: 1.2em 0 0 1.2em;
+  width: 50%;
+  a {
+    border-bottom: none;
+    color: $text-color;
+  }
+}
+
+#social {
+  float: right;
+  margin-top: 1.2em;
+  li {
+    display: inline-block;
+    font-size: 1.5em;
+    margin-left: .5em;
+    margin-right: .5em;
+    a, a:visited {
+      background: none;
+      border-bottom: none;
+      color: $muted-text-color;
+      font-size: 2em;
+    }
+    a:hover {
+      color: $highlight-color;
+    }
+  }
+}

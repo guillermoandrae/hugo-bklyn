@@ -8,39 +8,6 @@ body {
   padding-top: 5em;
 }
 
-#nav {
-  background-color: $highlight-color;
-  margin: -3px 0 0;
-  padding: 0;
-  position: absolute;
-  top: 1em;
-}
-
-#nav ul {
-  li {
-    border: 0;
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    a {
-      background: $highlight-color;
-      border: 0;
-      color: $background-color;
-      font-size: .9em;
-      font-weight: 700;
-      display: block;
-      letter-spacing: 1px;
-      margin: 0;
-      padding: 1.15em 1.5em;
-      text-transform: uppercase;
-    }
-    a:hover {
-      background: $banner-background-color;
-      color: $light-text-color;
-    }
-  }
-}
-
 h1 {
   background: $highlight-color;
   color: $background-color;
@@ -53,12 +20,6 @@ h1 {
   width: auto;
 }
 
-.page-home p strong {
-  color: $highlight-color;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
 ul {
   list-style-type: none;
   margin: 0;
@@ -68,11 +29,6 @@ ul {
 p {
   font-size: 1.5em;
   line-height: 1.5em;
-}
-
-body.page-404 #container p {
-  font-size: 2em;
-  text-align: center;
 }
 
 h1+p {
@@ -139,36 +95,4 @@ footer {
   color: $muted-text-color;
   clear: both;
   font-size: 75%;
-}
-
-#copyright {
-  color: $light-text-color;
-  font-size: 1.3em;
-  margin: 0;
-  padding: 1.2em 0 0 1.2em;
-  width: 50%;
-  a {
-    border-bottom: none;
-    color: $text-color;
-  }
-}
-
-#social {
-  float: right;
-  margin-top: 1.2em;
-  li {
-    display: inline-block;
-    font-size: 1.5em;
-    margin-left: .5em;
-    margin-right: .5em;
-    a, a:visited {
-      background: none;
-      border-bottom: none;
-      color: $muted-text-color;
-      font-size: 2em;
-    }
-    a:hover {
-      color: $highlight-color;
-    }
-  }
 }

@@ -1,4 +1,8 @@
 @media only screen and (max-width: $small-device-max-width) {
+  body {
+    border-top-width: .5em;
+  }
+
   h1 {
     margin: 1em auto;
     text-align: center;
@@ -26,26 +30,33 @@
   }
 
   #banner {
-    font-size: .8em;
+    font-size: .85em;
+    top: .5em;
   }
 
-  #banner + #nav {
-    font-size: .8em;
+  #nav {
+    padding: 0;
     text-align: center;
-    top: 4.6em;
+    top: 3.5em;
     width: 100%;
     ul {
+      font-size: .8em;
       margin: 0 auto;
-      display: table;
+      padding: 0;
+      li {
+        border: 0;
+        padding: 0;
+      }
     }
   }
 
-  #banner + #nav + #container {
+  #nav + #container {
     padding-top: 1em;
   }
 
   #copyright {
-    margin: 2em auto 0;
+    font-size: 1.1em;
+    margin: 1em auto;
     padding: 0;
     width: 80%;
   }
