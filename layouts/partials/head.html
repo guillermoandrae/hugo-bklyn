@@ -40,9 +40,9 @@
     {{ $stylesDark := resources.Get "scss/style-dark.scss" | toCSS | minify }}
     <!-- App CSS -->
     <script>
-        var getStyle = function () {
-            var currentTime = new Date().getHours();
-            if (currentTime&&currentTime <= 16) {
+        const getStyle = function () {
+            const currentTime = new Date().getHours();
+            if (currentTime && currentTime <= 17) {
                 document.write("<link href=\"{{ $stylesNormal.Permalink }}\" rel=\"stylesheet\">\n");
             } else {
                 document.write("<link href=\"{{ $stylesDark.Permalink }}\" rel=\"stylesheet\">\n");
