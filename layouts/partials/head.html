@@ -41,19 +41,26 @@
     <!-- App CSS -->
     <script>
         (function () {
+            let theme = "";
+            let stylesheetUrl = "";
             const normalStylesheetUrl = "{{ $stylesNormal.Permalink }}";
             const darkStylesheetUrl = "{{ $stylesDark.Permalink }}";
-            var stylesheetUrl = normalStylesheetUrl;
 
-            const queryString = window.location.search;
-            if (queryString) {
-                const urlParams = new URLSearchParams(queryString);
-                const mode = urlParams.get("mode");
-                stylesheetUrl = (mode.toString() == "dark") ? darkStylesheetUrl : normalStylesheetUrl;
+            if (localStorage.getItem("theme")) {
+                theme = localStorage.getItem("theme");
             } else {
-                const currentTime = new Date().getHours();
-                stylesheetUrl = (currentTime && currentTime <= 17) ? normalStylesheetUrl : darkStylesheetUrl;
+                const queryString = window.location.search;
+                if (queryString) {
+                    const urlParams = new URLSearchParams(queryString);
+                    theme = urlParams.get("mode");
+                } else {
+                    const currentTime = new Date().getHours();
+                    theme = (currentTime && currentTime <= 17) ? "normal" : "dark";
+                }
             }
+
+            stylesheetUrl = (theme == "dark") ? darkStylesheetUrl : normalStylesheetUrl;
+
             document.write("<link id=\"theme-mode\" href=\"" + stylesheetUrl + "\" rel=\"stylesheet\">\n");
         })();
     </script>

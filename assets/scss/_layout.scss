@@ -18,6 +18,9 @@ body.page-404 #container p {
   a {
     border-bottom: none;
     color: $text-color;
+    &:hover {
+      color: $highlight-color;
+    }
   }
 }
 

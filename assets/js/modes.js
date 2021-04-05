@@ -1,12 +1,10 @@
 $(document).ready(function () {
     $("#dark-mode-toggle").click(function () {
-        var newUrl = "";
+        let newUrl = "/?mode=";
+        let themeMode = "normal";
         const currentMode = $("#theme-mode").attr("href");
-        if (currentMode.indexOf("normal") == -1) {
-            newUrl = "/?mode=normal";
-        } else {
-            newUrl = "/?mode=dark";
-        }
-        window.location.href = newUrl;
+        themeMode = (currentMode.indexOf("normal") == -1) ? "normal" : "dark";
+        localStorage.setItem("theme", themeMode);
+        window.location.href = newUrl + themeMode;
     });
 });

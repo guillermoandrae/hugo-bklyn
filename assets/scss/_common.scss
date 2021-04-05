@@ -81,6 +81,10 @@ button {
   font-weight: 700;
   padding: 10px;
   text-transform: uppercase;
+  &:hover {
+    background: $background-color;
+    color: $secondary-text-color;
+  }
 }
 
 input::placeholder {
