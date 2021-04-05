@@ -5,7 +5,15 @@
         <li><a title="{{ .title }}" href="{{ .link | safeURL }}"><i class="fab {{ .icon }}"></i></a></li>
         {{ end }}
     </ul>
-    <p id="copyright">Use the code; don't use the content.<br>Built with <a href="https://gohugo.io/">Hugo</a> using the <a href="https://github.com/guillermoandrae/hugo-bklyn">bklyn</a> theme.</p>
+    <p id="credit">
+        Copyright &copy; {{ .Site.Params.Author }}
+        {{ if .Site.Params.StartingCopyrightYear }}
+            {{ .Site.Params.StartingCopyrightYear }}-{{ now.Format "2006" }}
+        {{ else }}
+            {{ now.Format "2006" }}.
+        {{ end }}<br>
+        Built with <a href="https://gohugo.io/">Hugo</a> using the <a href="https://github.com/guillermoandrae/hugo-bklyn">bklyn</a> theme.
+    </p>
 </footer>
 
 {{ range .Site.Params.Plugins.Js }}

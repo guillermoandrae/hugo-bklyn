@@ -10,8 +10,9 @@
     <meta name="description" content="{{ $description }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="{{ .Site.Params.Author }}">
-
+    {{ if .Site.Params.Google.SiteVerificationId }}
     <meta name="google-site-verification" content="{{ .Site.Params.Google.SiteVerificationId }}">
+    {{ end }}
 
     <meta property="og:url" content="{{ .Site.BaseURL }}">
     <meta property="og:type" content="website">
@@ -35,25 +36,26 @@
     <!-- Normalize CSS -->
     <link href="//cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
 
-    {{ $stylesDay := resources.Get "scss/style-day.scss" | toCSS | minify }}
-    {{ $stylesNight := resources.Get "scss/style-night.scss" | toCSS | minify }}
+    {{ $stylesNormal:= resources.Get "scss/style-normal.scss" | toCSS | minify }}
+    {{ $stylesDark := resources.Get "scss/style-dark.scss" | toCSS | minify }}
     <!-- App CSS -->
     <script>
         var getStyle = function () {
             var currentTime = new Date().getHours();
             if (currentTime&&currentTime <= 16) {
-                document.write("<link href=\"{{ $stylesDay.Permalink }}\" rel=\"stylesheet\">\n");
+                document.write("<link href=\"{{ $stylesNormal.Permalink }}\" rel=\"stylesheet\">\n");
             } else {
-                document.write("<link href=\"{{ $stylesNight.Permalink }}\" rel=\"stylesheet\">\n");
+                document.write("<link href=\"{{ $stylesDark.Permalink }}\" rel=\"stylesheet\">\n");
             }
         }();
     </script>
-    <noscript><link href="{{ $stylesDay.Permalink }}" rel="stylesheet"></noscript>
+    <noscript><link href="{{ $stylesNormal.Permalink }}" rel="stylesheet"></noscript>
     {{ range .Site.Params.Plugins.Css }}
     {{ $css := resources.Get .url | toCSS | minify }}
     <link href="{{ $css.Permalink }}" rel="stylesheet">
     {{ end }}
 
+    {{ if .Site.Params.Google.AnalyticsId }}
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="//www.googletagmanager.com/gtag/js?id={{ .Site.Params.Google.AnalyticsId }}"></script>
     <script>
@@ -62,22 +64,7 @@
         gtag('js', new Date());
         gtag('config', '{{ .Site.Params.Google.AnalyticsId }}');
     </script>
-
-    <!-- Track outbound links - Google Analytics -->
-    <script>
-        /**
-         * Function that captures a click on an outbound link in Analytics.
-         * This function takes a valid URL string as an argument, and uses that URL string
-         * as the event label. Setting the transport method to 'beacon' lets the hit be sent
-         * using 'navigator.sendBeacon' in browser that support it.
-         */
-        var captureOutboundLink = function(url) {
-            ga('send', 'event', 'outbound', 'click', url, {
-                'transport': 'beacon',
-                'hitCallback': function(){document.location = url;}
-            });
-        }
-    </script>
+    {{ end }}
 
     <!--[if lt IE 9]>
     <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>

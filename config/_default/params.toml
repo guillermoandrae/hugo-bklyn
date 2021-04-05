@@ -1,6 +1,7 @@
-#description = "This is an example site"
-#author = "That Person"
-#shortName = "Person"
+#description = "This is an example site built with the bklyn theme"
+#author = "Jane Doe"
+#shortName = "Example bklyn site"
+#startingCopyrightYear = "2017"
 
 ############## GOOGLE ##############
 #[google]
