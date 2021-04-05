@@ -43,6 +43,10 @@ h3 {
   text-transform: uppercase;
 }
 
+h2, h3, h4 {
+  color: $heading-color;
+}
+
 blockquote {
   border-left: 10px solid $muted-division-color;
   color: $secondary-text-color;
