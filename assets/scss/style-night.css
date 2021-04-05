@@ -1,231 +1,90 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,700");
 body {
-  background: white;
-  border-top: 1em solid cornflowerblue;
-  color: #333;
+  background: #222;
+  border-top: 1em solid yellow;
+  color: #ddd;
   font-family: "Roboto", "Helvetica", sans-serif;
   font-size: 1em;
   font-weight: 300;
   padding-top: 5em; }
 
-p {
-  font-size: 1.5em;
-  line-height: 1.5em; }
-
-sup {
-  margin-left: .3em; }
-
-a, a:visited, sup a:hover {
-  border: 0;
-  border-bottom: 5px solid cornflowerblue;
-  color: cornflowerblue;
-  text-decoration: none; }
-
-a:hover, sup a:hover {
-  border-bottom: 5px solid #bfd3f8;
-  color: #bfd3f8; }
-
-sup a, sup a:hover {
-  border-bottom: none; }
-
-#container, footer {
-  margin: 0 auto 3em;
-  width: 55%; }
-
-#nav {
-  margin-top: -1px;
-  padding: 0;
-  position: absolute;
-  top: 1em; }
-
-#nav a {
-  background: cornflowerblue;
-  color: white;
-  display: block;
-  letter-spacing: 2px;
-  padding: .85em 1em;
-  text-transform: uppercase; }
-
-#nav a:hover {
-  background: transparent;
-  color: cornflowerblue; }
-
-h1 + p {
-  margin-top: .2em; }
-
-strong {
-  color: cornflowerblue;
+h1 {
+  background: yellow;
+  color: #222;
+  display: table;
+  font-size: 1em;
   font-weight: 700;
-  text-transform: uppercase; }
+  margin-left: -2em;
+  padding: 5px 8px;
+  text-transform: uppercase;
+  width: auto; }
 
 ul {
   list-style-type: none;
   margin: 0;
   padding: .2em 0 0; }
 
-h1 {
-  font-size: .8em;
-  font-weight: 700;
-  margin-left: -2em;
+p {
+  font-size: 1.5em;
+  line-height: 1.5em; }
+
+h1 + p {
+  margin-top: .2em; }
+
+h2 {
+  font-size: 2em; }
+
+h3 {
   text-transform: uppercase; }
 
+blockquote {
+  border-left: 10px solid #3c3c3c;
+  color: #777;
+  font-size: .8em;
+  padding-left: 40px; }
+
+a, a:visited {
+  border: 0;
+  border-bottom: 5px solid yellow;
+  color: yellow;
+  text-decoration: none; }
+
+a:hover {
+  border-bottom: 5px solid #ffff66;
+  color: #ffff66; }
+
+input[type="search"] {
+  background: #222;
+  border: 5px solid #ffff66;
+  color: #777; }
+
+input::placeholder {
+  color: #777; }
+
+th {
+  color: #444; }
+
+td {
+  border-bottom: 1px solid #3c3c3c; }
+
+#container, footer {
+  margin: 0 auto 3em;
+  width: 55%; }
+
 hr {
-  border-top: 1px solid #eee; }
+  background: #3c3c3c;
+  border: 0;
+  height: 1px; }
 
 footer {
-  color: #ddd;
+  color: #444;
   clear: both;
   font-size: 75%; }
 
-#copyright {
-  margin: 0;
-  padding: 1.2em 0 0 1.2em;
-  width: 50%; }
-
-ul.social {
-  float: right;
-  margin-top: 1.2em; }
-
-ul.social li {
-  display: inline-block;
-  font-size: 1.5em;
-  margin-left: .5em;
-  margin-right: .5em; }
-
-ul.social li a, ul.social li a:visited {
-  background: none;
-  border-bottom: none;
-  color: #ddd;
-  font-size: 2em; }
-
-.page-page #container {
-  width: 100%; }
-  .page-page #container code {
-    color: gold;
-    font-family: "Monaco", monospace;
-    font-weight: bold;
-    font-size: smaller; }
-  .page-page #container h1 {
-    font-weight: normal;
-    text-align: center;
-    margin-bottom: .5em;
-    margin-left: 0;
-    color: cornflowerblue; }
-  .page-page #container a, .page-page #container a:hover {
-    border-bottom: 0; }
-  .page-page #container .covid-tile {
-    border-bottom: 1px solid #eee;
-    display: none;
-    padding: 2em 0;
-    text-align: center; }
-    .page-page #container .covid-tile:last-child {
-      border-bottom: 0; }
-  .page-page #container .covid-state {
-    color: #ccc;
-    font-weight: normal;
-    text-transform: uppercase; }
-  .page-page #container .covid-count {
-    display: block;
-    font-size: 6em; }
-  .page-page #container .covid-url {
-    display: block;
-    font-size: 1em;
-    margin-bottom: 1em; }
-  .page-page #container .covid-url a {
-    background: cornflowerblue;
-    color: white;
-    font-weight: bold;
-    padding: 7px 15px;
-    text-transform: uppercase; }
-  .page-page #container time {
-    color: #aaa;
-    display: block;
-    font-size: 1em; }
-
-body.page-404 #container p {
-  font-size: 2em;
-  text-align: center; }
-
-input[type="search"] {
-  background: white;
-  border: 5px solid #bfd3f8;
-  color: #ccc;
-  font-size: 1.5em;
-  margin: .5em auto 0;
-  padding: 20px;
-  width: 100%; }
-
-input:focus-within {
-  outline: none; }
-
-input::placeholder {
-  color: #ccc; }
-
-#posts_wrapper {
-  margin: 0 auto;
-  width: 80%; }
-
-table#posts {
-  margin-top: 1em;
-  padding-top: 1em;
-  width: 100%; }
-
-#posts th {
-  border: 0;
-  color: #ddd;
-  cursor: pointer;
-  font-size: .9em;
-  font-weight: 700;
-  text-align: center;
-  text-transform: uppercase; }
-
-#posts th:nth-child(2) {
-  width: 7em !important; }
-
-#posts td {
-  border-bottom: 1px solid #eee;
-  line-height: 1.3;
-  padding: 1em; }
-
-#posts td a {
-  border-bottom: none; }
-
-.dataTables_wrapper .dataTables_paginate a.paginate_button {
-  background: #eee;
-  border: 0;
-  font-size: .9em;
-  line-height: 2.5em;
-  padding: .5em 1em;
-  text-decoration: none;
-  text-transform: uppercase; }
-
-.dataTables_wrapper .dataTables_paginate .paginate_button.current,
-.dataTables_wrapper .dataTables_paginate a.paginate_button:hover,
-.dataTables_wrapper .dataTables_paginate a.paginate_button.current:hover {
-  background: cornflowerblue;
-  color: white !important;
-  border: 0;
-  cursor: pointer; }
-
-.dataTables_wrapper .dataTables_paginate .paginate_button.current {
-  color: white !important; }
-
-#posts_filter {
-  float: none;
-  text-align: center; }
-
-table.dataTable.no-footer {
-  border: 0; }
-
-.dataTables_wrapper .dataTables_paginate {
-  float: none;
-  margin-top: 2em;
-  text-align: center; }
-
 #banner {
-  background: black;
-  border-bottom: 1px solid black;
-  color: white;
+  background: #2f2f2f;
+  border-bottom: 1px solid #2f2f2f;
+  color: #ddd;
   font-weight: 700;
   padding: 15px 0;
   position: absolute;
@@ -233,40 +92,116 @@ table.dataTable.no-footer {
   top: 1em;
   width: 100%; }
 
+#nav {
+  background-color: yellow;
+  margin: -3px 0 0;
+  padding: 0;
+  position: absolute;
+  top: 1em; }
+
+#nav ul li {
+  border: 0;
+  display: inline-block;
+  margin: 0;
+  padding: 0; }
+  #nav ul li a {
+    background: yellow;
+    border: 0;
+    color: #222;
+    font-size: .9em;
+    font-weight: 700;
+    display: block;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 1.15em 1.5em;
+    text-transform: uppercase; }
+  #nav ul li a:hover {
+    background: #2f2f2f;
+    color: #777; }
+
+.page-home p strong {
+  color: yellow;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+body.page-404 #container p {
+  font-size: 2em;
+  text-align: center; }
+
+#copyright {
+  color: #777;
+  font-size: 1.3em;
+  margin: 0;
+  padding: 1.2em 0 0 1.2em;
+  width: 50%; }
+  #copyright a {
+    border-bottom: none;
+    color: #ddd; }
+
+#social {
+  float: right;
+  margin-top: 1.2em; }
+  #social li {
+    display: inline-block;
+    font-size: 1.5em;
+    margin-left: .5em;
+    margin-right: .5em; }
+    #social li a, #social li a:visited {
+      background: none;
+      border-bottom: none;
+      color: #444;
+      font-size: 2em; }
+    #social li a:hover {
+      color: yellow; }
+
 @media only screen and (max-width: 991.98px) {
+  body {
+    border-top-width: .5em; }
+
   h1 {
-    margin: 1em auto 0;
+    margin: 1em auto;
     text-align: center; }
 
-  p, input[type="search"] {
+  p {
     font-size: 1em; }
 
-  #posts td {
-    font-size: .8em; }
+  blockquote {
+    font-size: .9em; }
 
   #container, footer {
     width: 80%; }
 
-  ul.social {
+  #social {
     float: none; }
 
-  #copyright, ul.social {
+  #copyright, #social {
     margin: 2em auto 0;
     text-align: center; }
 
-  #posts {
-    width: 100% !important; }
-
   #banner {
-    font-size: .8em; }
+    font-size: .85em;
+    top: .5em; }
 
-  #banner + #nav {
-    font-size: .8em;
+  #nav {
+    padding: 0;
     text-align: center;
-    top: 4.5em;
+    top: 3.5em;
     width: 100%; }
+    #nav ul {
+      font-size: .8em;
+      margin: 0 auto;
+      padding: 0; }
+      #nav ul li {
+        border: 0;
+        padding: 0; }
 
-  #banner + #nav + #container {
-    padding-top: 1em; } }
+  #nav + #container {
+    padding-top: 1em; }
+
+  #copyright {
+    font-size: 1.1em;
+    margin: 1em auto;
+    padding: 0;
+    width: 80%; } }
 
 /*# sourceMappingURL=style-night.css.map */
