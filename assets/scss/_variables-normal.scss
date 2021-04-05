@@ -1,11 +1,14 @@
 @import "variables";
 
 // Brooklyn Days
-$background-color: white;
-$text-color: #333;
-$light-text-color: #aaa;
 $highlight-color: cornflowerblue;
-$light-highlight-color: lighten($highlight-color, 20%);
+$top-bar-color: $highlight-color;
+$background-color: white;
+$nav-background-color: $highlight-color;
+$nav-text-color: white;
+$text-color: #333;
+$secondary-text-color: #aaa;
+$secondary-highlight-color: lighten($highlight-color, 20%);
 $muted-text-color: #ddd;
 $muted-division-color: darken($background-color, 10%);
 

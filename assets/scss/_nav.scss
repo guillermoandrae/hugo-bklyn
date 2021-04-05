@@ -1,5 +1,5 @@
 #nav {
-  background-color: $highlight-color;
+  background-color: $nav-background-color;
   margin: -3px 0 0;
   padding: 0;
   position: absolute;
@@ -13,9 +13,9 @@
     margin: 0;
     padding: 0;
     a {
-      background: $highlight-color;
+      background: $nav-background-color;
       border: 0;
-      color: $background-color;
+      color: $nav-text-color;
       font-size: .9em;
       font-weight: 700;
       display: block;
@@ -25,8 +25,8 @@
       text-transform: uppercase;
     }
     a:hover {
-      background: $banner-background-color;
-      color: $light-text-color;
+      background: $background-color;
+      color: $secondary-text-color;
     }
   }
 }

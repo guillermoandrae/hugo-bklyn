@@ -1,11 +1,14 @@
 @import "variables";
 
 // Brooklyn Nights
+$highlight-color: cornflowerblue;
+$top-bar-color: black;
 $background-color: #222;
-$text-color: #ddd;
-$light-text-color: #777;
-$highlight-color: yellow;
-$light-highlight-color: lighten($highlight-color, 20%);
+$nav-background-color: $top-bar-color;
+$nav-text-color: #777;
+$text-color: #aaa;
+$secondary-text-color: #777;
+$secondary-highlight-color: lighten($highlight-color, 20%);
 $muted-text-color: #444;
 $muted-division-color: lighten($background-color, 10%);
 

@@ -1,6 +1,6 @@
 body {
   background: $background-color;
-  border-top: 1em solid $highlight-color;
+  border-top: 1em solid $top-bar-color;
   color: $text-color;
   font-family: $font-family;
   font-size: 1em;
@@ -45,7 +45,7 @@ h3 {
 
 blockquote {
   border-left: 10px solid $muted-division-color;
-  color: $light-text-color;
+  color: $secondary-text-color;
   font-size: .8em;
   padding-left: 40px;
 }
@@ -58,18 +58,18 @@ a, a:visited {
 }
 
 a:hover {
-  border-bottom: 5px solid $light-highlight-color;
-  color: $light-highlight-color;
+  border-bottom: 5px solid $secondary-highlight-color;
+  color: $secondary-highlight-color;
 }
 
 input[type="search"] {
   background: $background-color;
-  border: 5px solid $light-highlight-color;
-  color: $light-text-color;
+  border: 5px solid $secondary-highlight-color;
+  color: $secondary-text-color;
 }
 
 input::placeholder {
-  color: $light-text-color;
+  color: $secondary-text-color;
 }
 
 th {

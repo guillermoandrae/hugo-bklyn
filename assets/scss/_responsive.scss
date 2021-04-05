@@ -1,6 +1,6 @@
 @media only screen and (max-width: $small-device-max-width) {
   body {
-    border-top-width: .5em;
+    border-top-width: .75em;
   }
 
   h1 {
@@ -24,7 +24,7 @@
     float: none;
   }
 
-  #copyright, #social {
+  #credit, #social {
     margin: 2em auto 0;
     text-align: center;
   }
@@ -54,7 +54,7 @@
     padding-top: 1em;
   }
 
-  #copyright {
+  #credit {
     font-size: 1.1em;
     margin: 1em auto;
     padding: 0;
