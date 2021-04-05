@@ -40,14 +40,22 @@
     {{ $stylesDark := resources.Get "scss/style-dark.scss" | toCSS | minify }}
     <!-- App CSS -->
     <script>
-        const getStyle = function () {
-            const currentTime = new Date().getHours();
-            if (currentTime && currentTime <= 17) {
-                document.write("<link href=\"{{ $stylesNormal.Permalink }}\" rel=\"stylesheet\">\n");
+        (function () {
+            const normalStylesheetUrl = "{{ $stylesNormal.Permalink }}";
+            const darkStylesheetUrl = "{{ $stylesDark.Permalink }}";
+            var stylesheetUrl = normalStylesheetUrl;
+
+            const queryString = window.location.search;
+            if (queryString) {
+                const urlParams = new URLSearchParams(queryString);
+                const mode = urlParams.get("mode");
+                stylesheetUrl = (mode.toString() == "dark") ? darkStylesheetUrl : normalStylesheetUrl;
             } else {
-                document.write("<link href=\"{{ $stylesDark.Permalink }}\" rel=\"stylesheet\">\n");
+                const currentTime = new Date().getHours();
+                stylesheetUrl = (currentTime && currentTime <= 17) ? normalStylesheetUrl : darkStylesheetUrl;
             }
-        }();
+            document.write("<link href=\"" + stylesheetUrl + "\" rel=\"stylesheet\">\n");
+        })();
     </script>
     <noscript><link href="{{ $stylesNormal.Permalink }}" rel="stylesheet"></noscript>
     {{ range .Site.Params.Plugins.Css }}
