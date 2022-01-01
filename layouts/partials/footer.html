@@ -13,8 +13,16 @@
             {{ now.Format "2006" }}.
         {{ end }}<br>
         Built with <a href="https://gohugo.io/">Hugo</a> using the <a href="https://github.com/guillermoandrae/hugo-bklyn">bklyn</a> theme.<br>
-        <button id="dark-mode-toggle">Toggle Dark Mode</button>
     </p>
+    <div id="dark-mode-controls">
+        <ul>
+            <li><strong class="light-mode">Light Mode</strong></li>
+            <li><i class="light-mode fas fa-sun"></i></li>
+            <li><button id="dark-mode-toggle"><i class="fas fa-toggle-on"></i></button></li>
+            <li><i class="dark-mode fas fa-moon"></i></li>
+            <li><strong class="dark-mode">Dark Mode</strong></li>
+        </ul>
+    </div>
 </footer>
 
 {{ range .Site.Params.Plugins.Js }}

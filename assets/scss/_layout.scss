@@ -24,8 +24,46 @@ body.page-404 #container p {
   }
 }
 
+#dark-mode-controls {
+  display: block;
+  font-size: 2em;
+  margin: 1em auto;
+  text-align: center;
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      border: 0;
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+
+      .light-mode, .dark-mode {
+        display: block;
+        position: relative;
+        top: -7px;
+      }
+
+      strong.light-mode, strong.dark-mode {
+        color: $muted-text-color;
+        font-variant: all-petite-caps;
+        font-size: .8em;
+        font-weight: bold;
+        padding: 0 20px;
+        position: relative;
+        top: -10px;
+      }
+
+    }
+  }
+}
+
 #dark-mode-toggle {
-  margin: 1em 0;
+  background: transparent;
+  color: $muted-division-color;
+  font-size: 2em;
 }
 
 #social {
