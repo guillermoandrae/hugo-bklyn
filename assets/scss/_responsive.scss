@@ -65,4 +65,8 @@
     width: 80%;
   }
 
+  #dark-mode-controls li strong.light-mode, #dark-mode-controls li strong.dark-mode {
+    display: none;
+  }
+
 }
