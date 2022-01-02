@@ -13,7 +13,7 @@ $(document).ready(function () {
     }
 
     $darkModeToggle.click(function () {
-        let newUrl = "/?mode=";
+        let newUrl = window.location.pathname + "?mode=";
         let themeMode = "normal";
         themeMode = (isDarkModeOn) ? "normal" : "dark";
         localStorage.setItem("theme", themeMode);
