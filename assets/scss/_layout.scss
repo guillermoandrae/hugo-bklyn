@@ -64,6 +64,10 @@ body.page-404 #container p {
   background: transparent;
   color: $muted-division-color;
   font-size: 2em;
+
+  &:hover {
+    color: $highlight-color;
+  }
 }
 
 #social {
